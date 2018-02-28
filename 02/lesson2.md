@@ -5,6 +5,7 @@ Based on Chapter 2 of Edwin Brady's "Type Driven Development" ([link](https://ww
 
 Places to learn:
 * Our Textbook 
+* Idris Tutorial https://eb.host.cs.st-andrews.ac.uk/writings/idris-tutorial.pdf
 * Help on builtin functions (Prelude) and docs
   * Root: https://www.idris-lang.org/docs/1.2/
   * Strings: https://www.idris-lang.org/docs/1.2/base_doc/docs/Prelude.Strings.html
@@ -50,14 +51,15 @@ snd t
 
 length [1,2,3,4]
 
+-- Hey look in-REPL docs!
 :doc 
-filter (\x => x > 10) [1, 24, 16, 5, 5, 6, 7, 99]
-filter (> 10) [1, 24, 16, 5, 5, 6, 7, 99]
+
+-- Built-in list processing bits
 
 map (\x => x + 100) [1, 24, 16, 5, 5, 6, 7, 99]
 map (+ 100) [1, 24, 16, 5, 5, 6, 7, 99]
 
-length 
-
+filter (\x => x > 10) [1, 24, 16, 5, 5, 6, 7, 99]
+filter (> 10) [1, 24, 16, 5, 5, 6, 7, 99]
 
 ```
