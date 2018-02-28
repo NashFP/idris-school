@@ -29,10 +29,12 @@ and is available here: https://github.com/edwinb/TypeDD-Samples
 Playing with things learned:
 
 ```
+REPL goodies
 :t
 :r
 :exec
-:quite
+:quit
+:let 
 
 the Nat (cast 5)
 the String (cast 5)
