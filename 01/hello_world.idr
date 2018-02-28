@@ -1,11 +1,11 @@
 -- The entry point to any Idris program is the `main` function of the `Main` module  
 -- >>>
 
-module Main
+-- module Main
   
-main : IO ()
-main =
-  putStrLn "Hi Idris!"
+-- main : IO ()
+-- main =
+--   putStrLn "Hi Idris!"
 
 -- <<<
 
@@ -100,44 +100,44 @@ main =
 
 -- >>>
 
--- module Main
+module Main
 
--- StringOrInt : Bool -> Type
--- StringOrInt x = 
---   case x of 
---     True => Int
---     False => String
+StringOrInt : Bool -> Type
+StringOrInt x = 
+  case x of 
+    True => Int
+    False => String
 
--- valToString : (x : Bool) -> StringOrInt x -> String
--- valToString x val =
---   case x of 
---     True => cast val
---     False => val
+valToString : (x : Bool) -> StringOrInt x -> String
+valToString x val =
+  case x of 
+    True => cast val
+    False => val
 
--- getStringOrInt : (x : Bool) -> StringOrInt x
--- getStringOrInt x = 
---   case x of
---     True => 42
---     False => "Forty-two"
+getStringOrInt : (x : Bool) -> StringOrInt x
+getStringOrInt x = 
+  case x of
+    True => 42
+    False => "Forty-two"
 
--- main : IO ()
--- main =
---   putStrLn "Lets play a first-class type game"
+main : IO ()
+main =
+  -- putStrLn "Lets play a first-class type game"
   
   -- What will happen here?
-  -- putStrLn (getStringOrInt False)
+  --putStrLn (getStringOrInt False)
 
   -- OK, now how about this instead?
-  --putStrLn (getStringOrInt True)
+  -- putStrLn (getStringOrInt True)
 
   -- Next, let's try our valToString with handy "cast" call
   --putStrLn (valToString False "Five")
 
   -- So will an Int work?
-  -- putStrLn (valToString True 5)
+  --putStrLn (valToString True 5)
   
   -- So now let's wiggle our two function args...
-  --putStrLn (valToString True "Five")
+  putStrLn (valToString True "Five")
   --putStrLn (valToString False 5)
 
   -- 
