@@ -54,11 +54,22 @@ length [1,2,3,4]
 -- Hey look in-REPL docs!
 :doc 
 
+-- anonymous functions
+
+:let adder = \x,y => x + y
+adder 5 2
+
+-- Partial application
+:let plus10 = adder 10
+plus10 5
+
 -- Built-in list processing bits
 
 map (\x => x + 100) [1, 24, 16, 5, 5, 6, 7, 99]
+-- same as...
 map (+ 100) [1, 24, 16, 5, 5, 6, 7, 99]
 
+-- same as...
 filter (\x => x > 10) [1, 24, 16, 5, 5, 6, 7, 99]
 filter (> 10) [1, 24, 16, 5, 5, 6, 7, 99]
 
